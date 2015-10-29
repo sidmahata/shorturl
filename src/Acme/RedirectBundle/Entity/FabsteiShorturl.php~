@@ -1,0 +1,39 @@
+<?php
+
+namespace Acme\RedirectBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * FabsteiShorturl
+ *
+ * @ORM\Table(name="fabstei_shorturl", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_9EA97AB95F37A13B", columns={"token"})})
+ * @ORM\Entity
+ */
+class FabsteiShorturl
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="token", type="string", length=50, nullable=true)
+     */
+    private $token;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     */
+    private $url;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}

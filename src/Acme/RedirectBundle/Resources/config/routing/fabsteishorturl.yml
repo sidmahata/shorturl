@@ -1,0 +1,34 @@
+redirect:
+    path:     /list
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:index" }
+
+redirect_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:show" }
+
+redirect_new:
+    path:     /new
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:new" }
+
+redirect_create:
+    path:     /create
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:create" }
+    methods:  POST
+
+redirect_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:edit" }
+
+redirect_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:update" }
+    methods:  [POST, PUT]
+
+redirect_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:delete" }
+    methods:  [POST, DELETE]
+
+redirect_redirect:
+    path:     /{token}
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:redirect" }

@@ -1,0 +1,22 @@
+acme_redirect:
+    resource: "@AcmeRedirectBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+# Redirection from short to long urls
+redirect:
+    resource: "@FabsteiShorturlBundle/Resources/config/routing/redirect.yml"
+    #hostname_pattern: example.com
+    #prefix: /shorturls
+
+# Shorturl management
+shorturl:
+    resource: "@FabsteiShorturlBundle/Resources/config/routing/url.yml"
+
+
+redirect_redirect_main:
+    path:     /{token}/
+    defaults: { _controller: "AcmeRedirectBundle:FabsteiShorturl:redirect" }

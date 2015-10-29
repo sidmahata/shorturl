@@ -1,0 +1,7 @@
+acme_redirect_redirect:
+    resource: "@AcmeRedirectBundle/Resources/config/routing/fabsteishorturl.yml"
+    prefix:   /redirect
+
+acme_redirect_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcmeRedirectBundle:Default:index }
